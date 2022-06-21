@@ -1,5 +1,6 @@
 {
   "app": "python app.py",
+  "versionReporting": false,
   "watch": {
     "include": [
       "**"
@@ -27,6 +28,8 @@
     "@aws-cdk/core:target-partitions": [
       "aws",
       "aws-cn"
-    ]
+    ],
+    "systemName": "starwars",
+    "envType": "prd"
   }
 }
