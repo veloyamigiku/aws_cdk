@@ -9,6 +9,7 @@ from aws_cdk_15.resource.iam_role import IamRole
 from aws_cdk_15.resource.internet_gateway import InternetGateway
 from aws_cdk_15.resource.network_acl import NetworkAcl
 from aws_cdk_15.resource.route_table import RouteTable
+from aws_cdk_15.resource.security_group import SecurityGroup
 from aws_cdk_15.resource.subnet import Subnet
 from aws_cdk_15.resource.vpc import Vpc
 
@@ -61,6 +62,9 @@ class AwsCdk15Stack(Stack):
         iam_role = IamRole()
         iam_role.create_resources(self)
 
+        security_group = SecurityGroup(vpc.vpc)
+        security_group.create_resources(self)
+        
         # The code that defines your stack goes here
 
         # example resource
